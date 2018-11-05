@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "Avinash",
-  "license": "",
+  "engines": {
+    "node": "8.11.4"
+  },
+  "license": "MIT",
   "scripts": {
     "serve": "live-server public/",
     "build:dev": "webpack",
