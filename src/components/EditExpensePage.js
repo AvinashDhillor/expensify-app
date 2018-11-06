@@ -4,7 +4,8 @@ import ExpenseForm from './ExpenseForm';
 import {
   removeExpense,
   editExpense,
-  startRemoveExpense
+  startRemoveExpense,
+  startEditExpense
 } from '../actions/expenses';
 
 const EditExpensePage = props => (
@@ -12,7 +13,7 @@ const EditExpensePage = props => (
     <ExpenseForm
       expense={props.expense}
       onSubmit={expense => {
-        props.dispatch(editExpense(props.expense.id, expense));
+        props.dispatch(startEditExpense(props.expense.id, expense));
         props.history.push('/');
         console.log('updated', expense);
       }}
